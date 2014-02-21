@@ -1,0 +1,103 @@
+@import "_normalize.scss";
+
+*, *:before, *:after {
+  -webkit-font-smoothing: antialiased;
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+section {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    height: 108%;
+    width: 3%;
+    top: -4%;
+    z-index: 999;
+  }
+
+  &::after {
+    right: 0;
+  }
+}
+
+.inner {
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 60%;
+  color: white;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+hr {
+  margin: 0;
+  border: 0;
+}
+
+.az-before {
+  background-color: #2cbec1;
+
+  &::before {
+    background-image: url( '../img/left-1.svg' );
+  }
+
+  &::after {
+    background-image: url( '../img/right-1.svg' );  
+  }
+}
+
+.az-before-after{
+  height: 20px;
+  background-image: url( '../img/az-before-after.svg' );
+}
+
+.az-after {
+  background-color: #2cafaf;
+
+  &::before {
+    background-image: url( '../img/left-2.svg' );
+  }
+
+  &::after {
+    background-image: url( '../img/right-2.svg' );  
+  }
+}
+
+.az-reco {
+  height: 30px;
+  background-image: url( '../img/az-reco.svg' );
+}
+
+.reco-before {
+  background-color: #fcae30;
+
+  &::before {
+    background-image: url( '../img/left-3.svg' );
+  }
+
+  &::after {
+    background-image: url( '../img/right-3.svg' );  
+  }
+}
+
+.reco-before-after{
+  height: 20px;
+  background-image: url( '../img/reco-before-after.svg' );
+}
+
+.reco-after {
+  background-color: #ef9f2b;
+
+  &::before {
+    background-image: url( '../img/left-4.svg' );
+  }
+
+  &::after {
+    background-image: url( '../img/right-4.svg' );  
+  }
+}
